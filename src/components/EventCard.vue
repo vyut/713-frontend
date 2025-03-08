@@ -1,5 +1,12 @@
 <script setup lang="ts">
-defineProps<{ name: string }>()
+withDefaults(
+  defineProps<{
+    name: string
+  }>(),
+  {
+    name: 'default name',
+  },
+)
 </script>
 
 <template>
