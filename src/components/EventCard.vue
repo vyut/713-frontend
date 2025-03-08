@@ -1,17 +1,14 @@
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    name: string
-  }>(),
-  {
-    name: 'default name',
-  },
-)
+import type { Event } from '@/types'
+
+defineProps<{ event: Event }>()
 </script>
 
 <template>
   <div class="event-card">
-    <h1>This is an {{ name }} page</h1>
+    <h2>{{ event.title }}</h2>
+    <p>{{ event.description }}</p>
+    <span>@{{ event.time }} on {{ event.date }}</span>
   </div>
 </template>
 
