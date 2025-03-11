@@ -49,9 +49,10 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/:catchAll(.*)',
-      name: 'not-found',
+      path: '/404/:resource',
+      name: '404-resource-view',
       component: NotFoundView,
+      props: true,
     },
   ],
 })
