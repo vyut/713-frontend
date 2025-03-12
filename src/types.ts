@@ -32,3 +32,7 @@ export interface MessageState {
 export interface EventState {
   event: Event | null
 }
+
+export interface ParticipantState {
+  participant: Participant | null
+}
